@@ -46,7 +46,7 @@ public class Game {
     public void writeFile(int turn, String winner){
         try {
             FileWriter myFile = new FileWriter("winner.txt", true);
-            myFile.write("\n" + turn + " " + winner);
+            myFile.write("\n" + turn + " " + winner + "(Size: " + boards[0].getOcean().length + ")");
             myFile.close();
         }
         catch (IOException e) {

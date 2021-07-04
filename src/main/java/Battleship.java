@@ -23,7 +23,7 @@ public class Battleship {
         String optionOne;
         while(true) {
             System.out.println("Welcome our Battleship OOP Game");
-            System.out.println("If you want to start a new game Press 1\nIf you want to exit the game Press 2\nIf you want to see highscores Press 3");
+            System.out.println("If you want to start a new game Press 1\nIf you want to exit the game Press 2\nIf you want to see highscores Press 3\n(You can quit from the game anytime typing exit!)");
             optionOne = input.userInput();
             input.menuValidation(optionOne);
             if (input.menuValidation(optionOne)) {
@@ -35,7 +35,7 @@ public class Battleship {
     public void askForName(Game game, String mode){
         if(mode.equals("1")){
             while (true){
-                System.out.println("Player 1 please add your name (max 10 characters)");
+                System.out.println("\nPlayer 1 please add your name (max 10 characters)");
                 String userInput = input.userInput();
                 if(input.validateName(userInput)){
                     game.getPlayers()[0].setName(userInput);
@@ -43,7 +43,7 @@ public class Battleship {
                 }
             }
             while (true){
-                System.out.println("Player 2 please add your name (max 10 characters)");
+                System.out.println("\nPlayer 2 please add your name (max 10 characters)");
                 String userInput = input.userInput();
                 if(input.validateName(userInput)){
                     game.getPlayers()[1].setName(userInput);
@@ -52,7 +52,7 @@ public class Battleship {
             }
         }else{
             while (true){
-                System.out.println("Player 1 please add your name (max 10 characters)");
+                System.out.println("\nPlayer 1 please add your name (max 10 characters)");
                 String userInput = input.userInput();
                 if(input.validateName(userInput)){
                     game.getPlayers()[0].setName(userInput);
@@ -61,13 +61,13 @@ public class Battleship {
             }
             game.getPlayers()[1].setName("Computer");
         }
-        System.out.println("Get ready for battle: " + game.getPlayers()[0].getName() + " vs " + game.getPlayers()[1].getName() + "\n");
+        System.out.println("\nGet ready for battle: " + game.getPlayers()[0].getName() + " vs " + game.getPlayers()[1].getName() + "\n");
 
     }
     public String askForSize(){
         String selectedBoardSize;
         while(true){
-            System.out.println("Please select board size between 5-10");
+            System.out.println("\nPlease select board size between 5-10");
             selectedBoardSize = input.userInput();
             if(input.boardSizeValidation(selectedBoardSize)){
                 break;
@@ -77,7 +77,7 @@ public class Battleship {
     }
 
     public String askForComputerPlayer(){
-        System.out.println("Press 1 to play in hot seat mode or press 2 to play vs computer!");
+        System.out.println("\nPress 1 to play in hot seat mode or press 2 to play vs computer!");
         return input.userInput();
     }
 

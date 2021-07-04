@@ -46,7 +46,7 @@ public class Game {
     public void writeFile(int turn, String winner){
         try {
             FileWriter myFile = new FileWriter("winner.txt", true);
-            myFile.write(turn + " " + winner);
+            myFile.write("\n" + turn + " " + winner);
             myFile.close();
         }
         catch (IOException e) {

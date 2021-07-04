@@ -5,7 +5,15 @@ public class Input {
     public String userInput() {
         Scanner scanner = new Scanner(System.in);
         String read = scanner.nextLine();
+        if(read.equals("exit")){
+            System.out.println("\nGoodbye...");
+            System.exit(0);
+        }
         return read;
+    }
+
+    public void isItExit(String userInput){
+
     }
 
     public boolean menuValidation(String userInput) {//pl valid 1 vagy invalid pl A

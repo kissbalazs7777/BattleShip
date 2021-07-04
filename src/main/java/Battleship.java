@@ -106,7 +106,7 @@ public class Battleship {
             }
             else {
                 ArrayList<String> winners = new ArrayList<>();
-                System.out.println("High scores: \n");
+                System.out.println("\nHigh scores: \n");
                 File myObj = new File("winner.txt");
                 try {
                     Scanner myReader = new Scanner(myObj);
@@ -117,7 +117,7 @@ public class Battleship {
                     Collections.sort(winners);
                     for(int i = 0; i < winners.size(); i++){
                         String[] splitData = winners.get(i).split(" ");
-                        System.out.println("Player: " + splitData[1] + " turns: " + splitData[0]);
+                        System.out.println((i+1) + ". Player: " + splitData[1] + " turns: " + splitData[0]);
                     }
                     System.out.println("\nPress enter to continue...");
                     input.userInput();
